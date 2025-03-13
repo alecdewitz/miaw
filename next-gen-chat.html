@@ -12,7 +12,7 @@
 </style>
 
 <script type='text/javascript'>
-  function fetchAndSetToken() {
+	function fetchAndSetToken() {
 	        var idpEndpoint = "https://portico.sfproxy.controltelemetry.aws-dev2-uswest2.aws.sfdc.cl/api/v1/miaw/getJwtToken?issuer=testIssuer&subject=meu2&jwtExpInSeconds=42300&keyId=5f103f1b-ee38-404c-ac94-83c427764813";
 	         
 	        fetch(idpEndpoint).then(function (response) {
@@ -32,17 +32,17 @@
        console.log("onEmbeddedMessagingReady emitted");
        fetchAndSetToken();
     });
-  
+
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_nextgenchat.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
 			embeddedservice_nextgenchat.init(
-				'00DSG00000L6R6w',
-				'miawngc',
-				'https://orgfarm-d896ef8f33.my.site-com.adewitz-hejvi8t2rk2t0.wc.crm.dev:6101/ESWDeployment1740701581346',
+				'00DSG000007vf49',
+				'MIAW4',
+				'https://orgfarm-70a2f0a97c.my.site-com.adewitz-va0mznn3podq0.wb.crm.dev:6101/ESWMIAW1741897237626',
 				{
-					scrt2URL: 'https://orgfarm-bf65205086.test1.my.pc-rnd.salesforce-scrt.com'
+					scrt2URL: 'https://derekeswsdb6.demo.test1.my.pc-rnd.salesforce-scrt.com'
 				}
 			);
 		} catch (err) {
@@ -50,7 +50,8 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://orgfarm-d896ef8f33.my.site-com.adewitz-hejvi8t2rk2t0.wc.crm.dev:6101/ESWDeployment1740701581346/assets/js/init.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://orgfarm-70a2f0a97c.my.site-com.adewitz-va0mznn3podq0.wb.crm.dev:6101/ESWMIAW1741897237626/assets/js/init.js' onload='initEmbeddedMessaging()'></script>
+
 
 </body>
 </html>
